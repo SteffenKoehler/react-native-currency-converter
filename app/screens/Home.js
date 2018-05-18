@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {
-    View,
     StatusBar,
-    KeyboardAvoidingView
+    KeyboardAvoidingView,
 } from 'react-native';
+
+import PropTypes from 'prop-types';
 
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
@@ -20,12 +21,17 @@ const TEMP_CONVERSION_RATE = 0.7974;
 const TEMP_CONVERSION_DATE = new Date();
 
 class Home extends Component {
+    static propTypes = {
+        navigation: PropTypes.object,
+    }
+
     handlePressBaseCurrency = () => {
-        console.log('press base');
+        // navigation params needs to be aligned to the in routes.js defined properties
+        this.props.navigation.navigate('CurrencyList', { title: 'Base Currency' });
     }
 
     handlePressQuoteCurrency = () => {
-        console.log('press quote');
+        this.props.navigation.navigate('CurrencyList', { title: 'Quote Currency' });
     }
 
     handleTextChange = (text) => {
@@ -49,7 +55,7 @@ class Home extends Component {
 
                 <KeyboardAvoidingView behavior="padding">
                     <Logo />
-                    <InputWithButton 
+                    <InputWithButton
                         buttonText={TEMP_BASE_CURRENCY}
                         onPress={this.handlePressBaseCurrency}
                         defaultValue={TEMP_BASE_PRICE}
@@ -63,7 +69,7 @@ class Home extends Component {
                         value={TEMP_QUOTE_PRICE}
                     />
 
-                    <LastConverted 
+                    <LastConverted
                         base={TEMP_BASE_CURRENCY}
                         quote={TEMP_QUOTE_CURRENCY}
                         date={TEMP_CONVERSION_DATE}
@@ -76,7 +82,7 @@ class Home extends Component {
                     />
                 </KeyboardAvoidingView>
             </Container>
-        )
+        );
     }
 }
 
