@@ -3,42 +3,32 @@
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
+    "extends": "airbnb",
+    "parser": "babel-eslint",
     "plugins": [
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "spaces"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
         "react/jsx-filename-extension": [
             2,
             {
-              "extensions": [".js", ".jsx"]
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
             }
-          ],
-        "react/forbid-prop-types": [0],
-        "react/require-default-props": [0],
-        "global-require": [0]
+        ],
+        "react/forbid-prop-types": [
+            0
+        ],
+        "react/require-default-props": [
+            0
+        ],
+        "global-require": [
+            0
+        ]
     }
 }
