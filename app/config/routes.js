@@ -12,6 +12,7 @@ const HomeStack = StackNavigator({
         navigationOptions: {
             // remove header
             header: () => null,
+            headerTitle: 'Home',
         },
     },
     Options: {
