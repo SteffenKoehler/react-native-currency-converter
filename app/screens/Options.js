@@ -4,6 +4,7 @@ import Icon from 'react-native-ionicons';
 import PropTypes from 'prop-types';
 
 import { ListItem, Separator } from '../components/List';
+import { connectAlert } from '../components/Alert';
 
 const ICON_PREFIX = Platform.OS === 'ios' ? 'ios' : 'md';
 const ICON_COLOR = '#868686';
@@ -13,6 +14,7 @@ const ICON_SIZE = 23;
 class Options extends Component {
     static propTypes = {
         navigation: PropTypes.object,
+        alertWithType: PropTypes.func,
     };
 
     handleThemesPress = () => {
@@ -20,7 +22,7 @@ class Options extends Component {
     };
 
     handleSitePress = () => {
-        Linking.openURL('https://fixer.io').catch(() => alert('An error occured.'));
+        Linking.openURL('https:/fixer.io').catch(() => this.props.alertWithType('error', 'Sorry!', 'Fixer.io can\'t be opened right now.'));
     };
 
     render() {
@@ -54,4 +56,4 @@ class Options extends Component {
 }
 
 
-export default Options;
+export default connectAlert(Options);
