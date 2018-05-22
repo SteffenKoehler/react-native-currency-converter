@@ -8,19 +8,29 @@ import {
 
 import styles from './styles';
 
-const Container = ({ children }) => (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.container}> 
-            {children} 
-        </View>
-    </TouchableWithoutFeedback>
-)
+const Container = ({ children, backgroundColor }) => {
+    const containerStyles = [styles.container];
+    if (backgroundColor) {
+        containerStyles.push({
+            backgroundColor,
+        });
+    }
+
+    return (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <View style={containerStyles}>
+                {children}
+            </View>
+        </TouchableWithoutFeedback>
+    );
+};
 
 // PropTypes.element => only one Component
 // PropTypes.any => an Array of Components
 
 Container.propTypes = {
-    children: PropTypes.any
+    children: PropTypes.any,
+    backgroundColor: PropTypes.string,
 };
 
 export default Container;
