@@ -13,7 +13,7 @@ const Header = ({ onPress }) => (
 );
 
 Header.propTypes = {
-    onPress: PropTypes.func
-}
+    onPress: PropTypes.func,
+};
 
 export default Header;

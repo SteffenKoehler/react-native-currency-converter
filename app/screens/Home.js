@@ -117,7 +117,8 @@ class Home extends Component {
 const mapStateToProps = (state) => {
     // state is the redux state - combined in reducers/index.js
 
-    const baseCurrency = state.currencies.baseCurrency;
+    // const baseCurrency = state.currencies.baseCurrency;
+    const { baseCurrency } = state.currencies;
     const { quoteCurrency } = state.currencies;
     const conversionSelector = state.currencies.conversions[baseCurrency] || {};
     const rates = conversionSelector.rates || {};

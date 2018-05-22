@@ -10,17 +10,17 @@ const styles = EStyleSheets.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '$white'
+        backgroundColor: '$white',
     },
     text: {
         fontSize: 16,
-        color: '$darkText'
+        color: '$darkText',
     },
     separator: {
         marginLeft: 20,
         backgroundColor: '$border',
         flex: 1,
-        height: StyleSheet.hairlineWidth
+        height: StyleSheet.hairlineWidth,
     },
     icon: {
         backgroundColor: 'transparent',
@@ -28,14 +28,14 @@ const styles = EStyleSheets.create({
         height: 30,
         borderRadius: 15,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     iconVisible: {
-        backgroundColor: '$primaryBlue'
+        backgroundColor: '$primaryBlue',
     },
     checkIcon: {
-        width: 18
-    }
+        width: 18,
+    },
 });
 
 export default styles;

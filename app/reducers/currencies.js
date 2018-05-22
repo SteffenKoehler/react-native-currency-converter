@@ -1,4 +1,12 @@
-import { CHANGE_CURRENCY_AMOUNT, SWAP_CURRENCY, CHANGE_BASE_CURRENCY, CHANGE_QUOTE_CURRENCY, GET_INITIAL_CONVERSION, CONVERSION_RESULT, CONVERSION_ERROR } from '../actions/currencies';
+import {
+    CHANGE_CURRENCY_AMOUNT,
+    SWAP_CURRENCY,
+    CHANGE_BASE_CURRENCY,
+    CHANGE_QUOTE_CURRENCY,
+    GET_INITIAL_CONVERSION,
+    CONVERSION_RESULT,
+    CONVERSION_ERROR,
+} from '../actions/currencies';
 
 const initialState = {
     baseCurrency: 'USD',
@@ -7,7 +15,6 @@ const initialState = {
     conversions: {},
     error: null,
 };
-
 
 const setConversions = (state, action) => {
     let conversion = {

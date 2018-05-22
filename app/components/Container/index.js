@@ -3,5 +3,5 @@ import styles from './styles';
 
 export {
     Container,
-    styles
+    styles,
 };

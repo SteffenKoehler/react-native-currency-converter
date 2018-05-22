@@ -2,23 +2,23 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 const styles = EStyleSheet.create({
     container: {
-        alignItems: 'center'
+        alignItems: 'center',
     },
     wrapper: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     icon: {
         width: 19,
         height: 14,
-        marginRight: 11
+        marginRight: 11,
     },
     text: {
         color: '$white',
         fontSize: 14,
         fontWeight: '300',
-        paddingVertical: 20
-    }
+        paddingVertical: 20,
+    },
 });
 
 export default styles;
