@@ -1,4 +1,4 @@
-import { takeEvery, select, call, put} from 'redux-saga/effects';
+import { takeEvery, select, call, put } from 'redux-saga/effects';
 
 // 1. Swap currency
 // 2. Change base currency
