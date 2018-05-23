@@ -23,6 +23,7 @@ EStyleSheet.build({
 export default () => (
     <Provider store={store}>
         <AlertProvider>
+            {/* he added onNavigationStateChange because he got some log from the redux logger */}
             <Navigator onNavigationStateChange={null} />
         </AlertProvider>
     </Provider>
